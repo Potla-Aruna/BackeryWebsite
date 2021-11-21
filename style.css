@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    padding: 15px;
+    background-color: rgb(178, 170, 236);
+    height:14vh;
+    box-shadow: 0 5px 8px 2px rgb(104, 100, 100);
+    position: fixed;
+    top:0;
+    width:100vw;
+    z-index: 99;
+    opacity: 0.9;
+}
+
+header .logo{
+    margin-left: 2rem;
+}
+
+header .logo img
+{
+    height: 11vh;
+    width:15vw;
+    border-radius: 50%;
+    background: linear-gradient(rgba(77, 63, 204, 0.7),rgba(0,0,0,0.7)); 
+    padding-left: 20px;
+    margin: 10px;
+    
+}
+
+header .navigate{
+    margin: 0 15px;
+    
+}
+
+header .navigate ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+header .navigate ul li{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 25px;   
+}
+header .navigate ul li a{
+    text-decoration:none;
+    color:rgb(49, 47, 47);
+}
+header .navigate ul li a:hover{
+     border-bottom: 2px solid rgb(236, 107, 219);
+    color:rgb(236, 10, 123);
+    transform:scaleY(1.3);
+    padding-bottom: 10px;
+}
+header #menu{
+    font-size: 3rem;
+    color:rgb(49, 47, 47);
+    cursor: pointer;
+    display: none;
+}
+
+/* home coding */
+#home{
+    background:url('./images/ringceremony.jpg'),linear-gradient(rgba(241,155,155,0.7),rgba(241, 237, 237, 0.7));
+    margin-top: 14vh;
+    height:84vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:rgb(49, 47, 47);
+    width:100vw;
+
+}
+
+#home h1{
+    padding-top: 15%;
+    font-size: 4rem;
+    text-shadow: 2px 2px rgba(241,155,155,0.5);
+    letter-spacing: 1px;
+    
+}
+
+#home p{
+    font-size:2.5rem ;
+    line-height: 3rem;
+    font-weight: 600;
+
+}
+
+.home-btn {
+    padding: 25px 0;
+    
+}
+
+.home-btn button{
+    width: 20rem;
+    padding:10px 15px;
+    border:none;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    color: rgb(49, 47, 47);
+    background-color:rgb(178, 170, 236);
+    animation: animate 0.5s ease-in-out infinite;
+}
+@keyframes animate{
+    from{
+        transform: translateX(-5px);
+    }
+    to{
+        transform: translateX(5px);
+    }
+}
+.home-btn button:hover{
+    background-color:rgb(236, 10, 123) ;
+    animation: animate 5s ease-in-out 1;
+}
+
+/* About Coding*/
+#about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(241, 237, 237, 0.7);
+    
+}
+ #about .about-content{
+     width:95%;
+     height:auto;
+     padding:5rem 3rem;
+     text-align:center;
+     border-radius: 7px;
+     box-shadow: 0 0.4rem 0.6rem rgb(104, 100, 100);
+     background-color:rgb(178, 170, 236);
+     margin-left: 2rem;
+ }
+
+.about-content h2{
+    font-size: 3rem;
+    color: rgb(49, 47, 47);
+    font-weight: 600;
+    padding: 0.8rem 0;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px rgba(241,155,155,0.5);
+}
+
+.about-content p{
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    color: rgb(49, 47, 47);
+}
+.btn{
+    margin:10px 0;
+    width:16rem;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(236, 107, 219);
+    color: rgb(49, 47, 47);
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding: 1.1rem;
+}
+#about .image img{
+    width:100%;
+    height:auto;
+    animation: animate-image 4s ease-in-out infinite;
+}
+
+@keyframes animate-image{
+    0%,100%{
+        transform: translateX(-3.5rem);
+    }
+    25%{
+        transform: translateY(4rem);
+    }
+    50%{
+        transform: translateX(2.7rem);
+    }
+    75%{
+        transform: translateY(-5rem);
+    }   
+}
+
+/* Product Coding */
+.title{
+    text-align: center;
+    font-size: 4rem;
+    color:rgb(49, 47, 47);
+    padding: 1rem;
+    text-shadow: 2px 2px rgba(241,155,155,0.5);  
+    
+}
+.title span{
+    color:rgb(178, 170, 236);
+    padding-left:5px;
+}
+
+.cake-product .inner-cake-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap ;
+}
+.cake-product .inner-cake-col{
+    background: #fff;
+    max-width: 1300px;
+    height:37rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0.5rem 0.6rem 1rem rgb(178, 170, 236);
+    padding: 2rem;
+    margin:3rem;
+    flex:1 1 32rem;
+}
+.cake-product .inner-cake-col img{
+    height: 16rem;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+.cake-product .inner-cake-col:hover{
+    transition: all 0.6s ease-in-out;
+    transform: translateY(-1rem);
+}
+.cake-product .inner-cake-col .cake-price  p{
+ width:4.2rem;
+ text-align: center;
+ font-size: 2rem;
+ border-radius: 6rem;
+ background-color:lightgrey ;
+ color: rgb(49, 47, 47);
+ padding: 1.2rem 0.5rem;
+ margin-top: -2rem;
+ margin-left: 18rem;
+ height: auto;
+ position: absolute;
+}
+.cake-product .inner-cake-col h2{
+    color: rgb(178, 170, 236);
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.cake-product .inner-cake-col h3{
+    font-size: 2rem;
+    font-weight: 500;
+    color:rgb(49, 47, 47);
+}
+.cake-product .inner-cake-col p{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color:rgb(49, 47, 47);
+    padding:0.8rem 0;
+}
+
+/* Services Coding */
+
+#service .cake-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    border-top: 0.5rem dotted rgb(178, 170, 236);
+    border-bottom: 0.5rem dotted rgb(178, 170, 236);
+    padding: 1.5rem 0;
+    margin:2rem 0;
+}
+#service .cake-list .btn1{
+    width:18rem;
+    padding:1rem;
+    border-radius: 5px;
+    border:none;
+    color: rgb(49, 47, 47);
+    background-color:rgb(178, 170, 236) ;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    margin:1.5rem;
+}
+#service .cake-list .btn1:hover{
+    background-color:rgb(236, 107, 219) ;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+#service .cake-row {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap ;   
+}
+#service .cake-row .image{
+    border-radius: 1.5rem;
+    box-shadow: 0.5rem 0.6rem 1rem rgb(178, 170, 236);
+    flex:1 1 25rem;
+    padding:1.5rem;
+    margin:2rem;
+}
+#service .cake-row .image img{
+   width:100%;
+   object-fit: cover;
+   height: 36rem;
+   object-position: center;
+} 
+#service .cake-content {
+    flex:1 1 26rem;   
+}
+#service .cake-content  .cake-info{
+    padding:1.5rem 5.3rem;  
+}
+#service .cake-content  .cake-info h3{
+    font-size: 2.4rem;
+    color:rgb(178, 170, 236);
+    font-weight: 600;
+}
+#service .cake-content  .cake-info a{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color:darkblue;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+#service .cake-content  .cake-info a i{
+    padding:1.5rem 1.5rem  0 0; 
+    font-size: 2.4rem;
+    color:rgb(236, 107, 219);
+    transform: rotate('90degree');
+}
+/* contact us coding */
+
+#contact{
+    padding-top: 13rem;
+
+}
+.cake-contact{
+    width:100%;
+    background: rgba(241, 237, 237, 0.7);
+}
+.cake-contact .cake-contact-row{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cake-contact .cake-contact-col{
+    text-align: center;
+    margin: 3rem;
+    flex:1 1 28rem;
+
+}
+
+.cake-contact-col .images {
+    width:90%;
+    height:auto;
+    margin:2.4rem;
+    padding:1.5rem;
+    flex:1 1 28rem;
+    border:1px solid transparent;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    object-position: center;
+    border:1px solid rgba(241, 237, 237, 0.7);
+    box-shadow: 0.5rem 0.6rem 1rem rgb(178, 170, 236);
+    margin-top:2rem;
+}
+.cake-contact-col h1{
+    padding:1.5rem 0;
+    color:rgb(178, 170, 236);
+    letter-spacing: 1px;
+}
+.cake-contact-col .social i{
+padding:1.3rem;
+border-radius: 1.5rem;
+background: rgb(178, 170, 236);
+color:rgb(49, 47, 47);
+font-size: 2.4rem;
+border:none;
+margin-bottom: 2rem;
+margin-left: 1rem;
+}
+.cake-contact-col .social i:hover{
+    background-color:rgb(236, 107, 219) ;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;   
+}
+.cake-contact-col  p{
+    padding:0.8rem 0;
+    line-height: 2rem;
+    color: rgb(49, 47, 47);
+    font-size:1.8rem;
+    margin-top: 1rem;
+}
+.cake-contact-col input, .cake-contact-col textarea{
+    width:80%;
+    padding:1.5rem;
+    margin-bottom: 1.8rem;
+    border:none;
+    border-bottom:0.5rem dotted rgb(178, 170, 236);
+}
+.map iframe{
+    margin:3rem 0;
+    width:100%;
+
+}
+.copyright{
+    text-align: center;
+    background-color:rgb(178, 170, 236);
+    margin-top:7rem;
+    padding:2rem;   
+}
+.copyright i{
+    font-size: 2.5rem;
+    color:rgb(49, 47, 47);
+}
+.copyright p{
+    font-size: 2rem;
+    color: rgb(49, 47, 47);
+    letter-spacing: 1px;   
+}
+
+
+@media(max-width:768px){
+    
+header #menu{
+    display: block;
+
+
+}
+    header{
+        width:100%;
+    }
+    header .logo{
+        position: absolute;
+        left:40%;
+    }
+    header .navigate{
+        position: fixed;
+        top:12rem;
+        left:0;
+        width:100%;
+        background-color:rgb(178, 170, 236);
+        transform:scaleY(0);
+        transform-origin:top;
+           opacity: 0;
+    }
+    
+    header .navigate ul{
+        flex-flow:column;
+        padding:1.5rem;   
+    }
+    header .navigate ul li{
+        margin:1.5rem;
+        width:100%;
+    }
+    header .navigate ul li a{
+        display: block;
+        color: rgb(49, 47, 47);
+        padding-left: 3rem;
+        border-right: 0.2rem solid black;
+        font-size: 1.5rem;
+    }
+    header .navigate ul li a:hover{
+        color:rgb(236, 107, 219);
+        border-color: rgb(236, 107, 219);
+
+
+    }
+    header .navigate.nav-toggle{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .fa-times{
+        transition:0.5s ease-in-out;
+    transform:rotate(180deg);
+    }
+
+    #home{
+
+        width:100%;
+        margin-bottom: 2rem;
+    }
+
+    #home h1{
+        font-size: 4.5rem;
+        padding-top: 50%;   
+    }
+    #home p{
+        font-size: 1.8rem;
+
+    }
+    #about{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #product .title{
+    text-align: center;
+    font-size: 3rem;
+    }
+    #service .cake-list{
+        width:90%;
+        justify-content: center;
+
+    }
+    #service .cake-list .bt1{
+        display:inline-block;
+        margin:0.5rem;
+        font-size: 1.2rem; 
+           
+    }
+
+
+
+}
+
+
+
